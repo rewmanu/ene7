@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>course</title>
+<style>
+    body {
+        background-color: #FFA500; /* Orange background */
+        font-family: Arial, sans-serif; /* Use Arial font */
+    }
+
+    form {
+        background-color: #FFFFFF; /* White form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+        max-width: 500px; /* Limit form width */
+        margin: 20px auto; /* Center the form */
+    }
+
+    h2 {
+        text-align: center;
+        color: #FFFFFF; /* White color for heading */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #FF8C00; /* Dark Orange for table headers */
+        color: white;
+    }
+
+    input[type="text"], input[type="email"], select {
+        width: calc(100% - 16px); /* Adjust width to fit within table */
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #FF8C00; /* Dark Orange for submit button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 16px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #FFA500; /* Lighter Orange on hover */
+    }
+
+    #evaluationButton {
+        background-color: #FF8C00; /* Dark Orange for Choose Option button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 16px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #evaluationButton:hover {
+        background-color: #FFA500; /* Lighter Orange on hover */
+    }
+</style>
+</head>
+<body>
+
+<h2>course</h2>
+
+<form action="#" method="post">
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <th>Term</th>
+            <td><select name="Term">
+                <option value="MIDTERM">MIDTERM</option>
+                <option value="FINAL">FINAL</option></td>
+        </tr>
+        <tr>
+            <th>Subject</th>
+            <td>
+                <select name="subject[]">
+                    <option value="EIE101">EIE101</option>
+                    <option value="EIE102">EIE102</option>
+                    <option value="EIE103">EIE103</option>
+                    <option value="EIE104">EIE104</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </td>
+        </tr>
+        <!-- Add more form fields as needed -->
+    </table>
+</form>
+<fieldset>
+    <legend>Choose your target group:</legend>
+  
+    <div>
+      <input type="checkbox" id="3" name="3" checked />
+      <label for="3">3</label>
+    </div>
+  
+    <div>
+      <input type="checkbox" id="4" name="4" />
+      <label for="4">4</label>
+    </div>
+</fieldset>
+  
+<button id="evaluationButton">Evaluation</button>
+
+<script>
+    document.getElementById("evaluationButton").onclick = function() {
+        if (document.getElementById("4").checked) {
+            window.location.href = "https://fastidious-crostata-978a9c.netlify.app";
+        }
+    };
+</script>
+
+</body>
+</html>
